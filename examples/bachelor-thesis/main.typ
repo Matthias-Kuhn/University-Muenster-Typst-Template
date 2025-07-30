@@ -22,11 +22,12 @@ felis. Curabitur dictum gravida mauris. Nam arcu lib
 ero, nonummy eget, consectetuer id, vulputate a, magna.",
 
   author: "The Computer",
-  faculty: "Engineering and Computer Science",
+  faculty: "Mathematics and Computer Science",
   department: "Computer Science",
-  study-course: "Bachelor of Science Informatik Technischer Systeme",
+  group: "Very good",
+  study-course: "Bachelor of Science Informatik",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
-  submission-date: datetime(year: 1948, month: 12, day: 10),
+  submission-date: datetime.today(),
   include-declaration-of-independent-processing: true,
 )
 

@@ -10,6 +10,7 @@
   author: "",
   faculty: "",
   department: "",
+  group: "",
   study-course: "",
   supervisors: (),
   submission-date: none,
@@ -21,7 +22,7 @@
     number-align: center,
   )
 
-  // HAW Logo
+  // University of Münster Logo
   place(
     top + right,
     dx: -13mm,
@@ -45,7 +46,7 @@
         v(2mm)
       },
       // Author
-      text(author, size: 9pt),
+      text(author, size: 15pt),
       v(13mm),
       // Title
       par(
@@ -56,17 +57,24 @@
       line(start: (0pt, 0pt), length: 30pt, stroke: 1mm),
       v(12mm),
       // Faculty
-      text(translations.faculty-of + " " + faculty, size: 10pt, weight: "bold"),
-      v(2mm),
-      // Department
-      text(translations.department-of + " " + department, size: 10pt),
+      text(translations.faculty-of + " " + faculty, size: 12pt, weight: "bold"),
+      if department.len() > 0 {
+        v(3mm)
+        // Department
+        text(translations.department-of + " " + department, size: 10pt, )
+      },
+      if group.len() > 0 {
+        v(2mm)
+        // Group
+        text(group + " " + translations.research-group, size: 10pt)
+      }
     )
   )
 
   // University name text
   place(
     right + bottom,
-    dx: -11mm,
+    dx: -13mm,
     dy: -35mm,
     box(
       align(
@@ -74,11 +82,9 @@
         stack(
           line(start: (0pt, 0pt), length: 25pt, stroke: 0.9mm),
           v(3mm),
-          text("HOCHSCHULE FÜR ANGEWANDTE", size: 9pt, weight: "bold"),
+          text("UNIVERSITÄT MÜNSTER", size: 9pt, weight: "bold"),
           v(2mm),
-          text("WISSENSCHAFTEN HAMBURG", size: 9pt, weight: "bold"),
-          v(2mm),
-          text("Hamburg University of Applied Sciences", size: 9pt),
+          text("University of Münster", size: 9pt),
         )
       )
     )
@@ -89,7 +95,7 @@
     place(
       left + top,
       dx: 18mm,
-      dy: 240mm,
+      dy: 252mm,
       stack(
         // Submission date
         if submission-date != none {
@@ -124,6 +130,14 @@
   
 
   if is-thesis {
+
+    // University of Münster Claim
+    place(
+    bottom + left,
+    dx: +13mm,
+    dy: -40mm,
+    image("../assets/claim.svg", width: 33mm)
+    )
     // Second cover page
     pagebreak()
 
@@ -161,14 +175,14 @@
         spacing: 3mm,
         if is-bachelor-thesis {
           text(translations.bachelor-thesis-submitted-for-examination-in-bachelors-degree)
-        },
-        if is-master-thesis {
+        }
+        else if is-master-thesis {
           text(translations.master-thesis-submitted-for-examination-in-masters-degree)
         },
         text(translations.in-the-study-course + " " + text(study-course, style: "italic")),
         text(translations.at-the-department + " " + department),
         text(translations.at-the-faculty-of + " " + faculty),
-        text(translations.at-university-of-applied-science-hamburg),
+        text(translations.at-university-of-muenster),
       ),
 
       v(4mm),

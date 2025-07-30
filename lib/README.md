@@ -1,6 +1,16 @@
-# HAW Hamburg Typst Template
+# University of Münster Typst Template
 
-This is an **`unofficial`** template for writing a report or thesis in the `HAW Hamburg` department of `Computer Science` design using [Typst](https://github.com/typst/typst).
+This is a fork of the Typst template written by [Lasse Rosenow](https://github.com/juriroemer/University-Muenster-Typst-Template).
+
+This is an **`unofficial`** template for writing a report or thesis at the `University of Münster` using [Typst](https://github.com/typst/typst).
+
+## Goals of this fork
+
+This fork aims to stay as close as possible to the upstream version, with just a few (cosmetic) tweaks:
+
+- [x] adapt strings, graphics and cover to University of Münster
+- [x] add option to define a working group
+- [ ] add alternative cover page option in the style commonly used at the University of Münster
 
 ## Required Fonts
 
@@ -8,27 +18,29 @@ To correctly render this template please make sure that the `New Computer Modern
 
 ## Usage
 
-To use this package just add the following code to your [Typst](https://github.com/typst/typst) document:
+I don't want to spam the Typst Universe with different versions of the same template, so to use the template, please clone this repository and import the local clone. This may change in the future, if this template diverges further from upstream.
+
+E.g.:
 
 ### Report
 
 ```typst
-#import "@preview/haw-hamburg:0.3.0": report
+#import "./University-Muenster-Typst-Template/lib/lib.typ": report
 
 #show: report.with(
   language: "en",
   title: "Example title",
   author:"Example author",
-  faculty: "Engineering and Computer Science",
+  faculty: "Mathematics and Computer Science",
   department: "Computer Science",
   include-declaration-of-independent-processing: true,
 )
 ```
 
-### Bachelor Thesis
+### Bachelor's Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.3.0": bachelor-thesis
+#import "./University-Muenster-Typst-Template/lib/lib.typ": bachelor-thesis
 
 #show: bachelor-thesis.with(
   language: "en",
@@ -42,19 +54,19 @@ To use this package just add the following code to your [Typst](https://github.c
   abstract-en: "Example abstract",
 
   author: "Example author",
-  faculty: "Engineering and Computer Science",
+  faculty: "Mathematics and Computer Science",
   department: "Computer Science",
-  study-course: "Bachelor of Science Informatik Technischer Systeme",
+  study-course: "Bachelor of Science Informatik",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
-  submission-date: datetime(year: 1948, month: 12, day: 10),
+  submission-date: datetime.today(),
   include-declaration-of-independent-processing: true,
 )
 ```
 
-### Master Thesis
+### Master's Thesis
 
 ```typst
-#import "@preview/haw-hamburg:0.3.0": master-thesis
+#import "./University-Muenster-Typst-Template/lib/lib.typ": master-thesis
 
 #show: master-thesis.with(
   language: "en",
@@ -68,11 +80,11 @@ To use this package just add the following code to your [Typst](https://github.c
   abstract-en: "Example abstract",
 
   author: "The Computer",
-  faculty: "Engineering and Computer Science",
+  faculty: "Mathematics and Computer Science",
   department: "Computer Science",
-  study-course: "Master of Science Computer Science",
+  study-course: "Master of Science Informatik",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
-  submission-date: datetime(year: 1948, month: 12, day: 10),
+  submission-date: datetime.today(),
   include-declaration-of-independent-processing: true,
 )
 ```
@@ -91,8 +103,8 @@ These problems can be avoided by following these steps:
 
 ## Examples
 
-Examples can be found inside of the [examples](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples) directory
+Examples can be found inside of the [examples](https://github.com/juriroemer/University-Muenster-Typst-Template/tree/main/examples) directory
 
-- For Bachelor  theses see: [Bachelor thesis example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/bachelor-thesis)
-- For Master theses see: [Master thesis example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/master-thesis)
-- For reports see: [Report example](https://github.com/LasseRosenow/HAW-Hamburg-Typst-Template/tree/main/examples/report)
+- For Bachelor theses see: [Bachelor's thesis example](https://github.com/juriroemer/University-Muenster-Typst-Template/tree/main/examples/bachelor-thesis)
+- For Master theses see: [Master's thesis example](https://github.com/juriroemer/University-Muenster-Typst-Template/tree/main/examples/master-thesis)
+- For reports see: [Report example](https://github.com/juriroemer/University-Muenster-Typst-Template/tree/main/examples/report)

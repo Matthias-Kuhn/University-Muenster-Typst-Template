@@ -1,7 +1,7 @@
 [package]
-name = "haw-hamburg-master-thesis"
+name = "university-muenster-master-thesis"
 entrypoint = "lib.typ"
-description = "Unofficial template for writing a master-thesis in the HAW Hamburg department of Computer Science design."
+description = "Unofficial template for writing a master's thesis at the University of Münster."
 categories = ["thesis"]
 
 [template]

@@ -14,12 +14,12 @@
 
 #let translations = (
   bachelor-thesis: value(
-    en: "Bachelor thesis",
+    en: "Bachelor's thesis",
     de: "Bachelorarbeit",
   ),
 
   master-thesis: value(
-    en: "Master thesis",
+    en: "Master's thesis",
     de: "Masterarbeit",
   ),
 
@@ -33,24 +33,29 @@
     de: "Department",
   ),
 
+  research-group: value(
+    en: "Group",
+    de: "Arbeitsgruppe",
+  ),
+
   bachelor-thesis-submitted-for-examination-in-bachelors-degree: value(
-    en: "Bachelor thesis submitted for examination in Bachelor's degree",
+    en: "Bachelor's thesis submitted in partial fulfillment of the requirements",
     de: "Bachelorarbeit eingereicht im Rahmen der Bachelorprüfung",
   ),
 
   master-thesis-submitted-for-examination-in-masters-degree: value(
-    en: "Master thesis submitted for examination in Master's degree",
+    en: "Master's thesis submitted in partial fulfillment of the requirements",
     de: "Masterarbeit eingereicht im Rahmen der Masterprüfung",
   ),
 
   in-the-study-course: value(
-    en: "in the study course",
+    en: "for the degree of ",
     de: "im Studiengang"
   ),
 
   at-the-department: value(
-    en: "at the Department",
-    de: "am Department"
+    en: "at the Department of",
+    de: "am Fachbereich"
   ),
 
   at-the-faculty-of: value(
@@ -58,9 +63,9 @@
     de: "der Fakultät"
   ),
 
-  at-university-of-applied-science-hamburg: value(
-    en: "at University of Applied Science Hamburg",
-    de: "der Hochschule für Angewandte Wissenschaften Hamburg"
+  at-university-of-muenster: value(
+    en: "at the University of Münster",
+    de: "der Universität Münster"
   ),
 
   supervising-examiner: value(

@@ -1,4 +1,4 @@
-#import "@preview/haw-hamburg:0.5.1": report
+#import "../../lib/lib.typ": report
 #import "dependencies.typ": *
 
 // Take a look at the file `template.typ` in the file panel
@@ -7,7 +7,7 @@
   language: "en",
   title: "Answer to the Ultimate Question of Life, the Universe, and Everything",
   author:"The Computer",
-  faculty: "Engineering and Computer Science",
+  faculty: "Mathematics and Computer Science",
   department: "Computer Science",
   include-declaration-of-independent-processing: true,
 )

@@ -8,10 +8,11 @@
   language: "en",
   title: "Universal Declaration of Human Rights",
   author:"United Nations",
-  faculty: "Engineering and Computer Science",
+  faculty: "Mathematics and Computer Science",
   department: "Computer Science",
+  group: "Very good", 
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
-  submission-date: datetime(year: 1948, month: 12, day: 10),
+  submission-date: datetime.today(),
   include-declaration-of-independent-processing: true,
 )
 

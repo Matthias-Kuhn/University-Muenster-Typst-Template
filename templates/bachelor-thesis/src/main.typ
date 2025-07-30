@@ -1,4 +1,4 @@
-#import "@preview/haw-hamburg:0.5.1": bachelor-thesis
+#import "../../lib/lib.typ": bachelor-thesis
 #import "dependencies.typ": *
 
 // Take a look at the file `template.typ` in the file panel
@@ -21,11 +21,11 @@ felis. Curabitur dictum gravida mauris. Nam arcu lib
 ero, nonummy eget, consectetuer id, vulputate a, magna.",
 
   author: "The Computer",
-  faculty: "Engineering and Computer Science",
+  faculty: "Mathematics and Computer Science",
   department: "Computer Science",
-  study-course: "Bachelor of Science Informatik Technischer Systeme",
+  study-course: "Bachelor of Science Informatik",
   supervisors: ("Prof. Dr. Example", "Prof. Dr. Example"),
-  submission-date: datetime(year: 1948, month: 12, day: 10),
+  submission-date: datetime.today(),
   include-declaration-of-independent-processing: true,
 )
 
