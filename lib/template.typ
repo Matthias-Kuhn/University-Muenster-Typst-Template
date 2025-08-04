@@ -15,6 +15,7 @@
   abstract-en: none,
 
   author: "",
+  matricule-number: "",
   faculty: "",
   department: "",
   group: "",
@@ -23,6 +24,7 @@
   submission-date: none,
   include-declaration-of-independent-processing: false,
   body,
+  cover: import "pages/covers/covers.typ": modern_cover_page,
 ) = {
   let THESIS_HEADING_EXTRA_TOP_MARGIN = 70pt
   let PAGE_MARGIN_TOP = 37mm
@@ -155,8 +157,7 @@
   show heading.where(level: 3): set text(size: font_size)
 
   // Cover
-  import "pages/cover.typ": cover_page
-  cover_page(
+  cover(
     is-thesis: is-thesis,
     is-master-thesis: is-master-thesis,
     is-bachelor-thesis: is-bachelor-thesis,
@@ -164,6 +165,7 @@
 
     title: title,
     author: author,
+    matricule-number: matricule-number,
     faculty: faculty,
     department: department,
     group: group,

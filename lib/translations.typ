@@ -123,4 +123,19 @@ nach aus anderen Werken entnommene Stellen sind unter Angabe der Quellen kenntli
     en: "Original Signature",
     de: "Unterschrift im Original"
   ),
+
+  submitted-by: value(
+    en: "submitted by",
+    de: "eingereicht von"
+  ),
+
+  matricule-number: value(
+    en: "Matricule Number",
+    de: "Matrikelnummer"
+  ),
+
+  course-of-study: value(
+    en: "Course of Study",
+    de: "Studiengang"
+  )
 )

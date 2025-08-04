@@ -1,13 +1,13 @@
-#import "../translations.typ": translations
+#import "../../translations.typ": translations
 
-#let cover_page(
+#let classic_cover_page(
   is-thesis: true,
   is-master-thesis: false,
   is-bachelor-thesis: true,
   is-report: false,
-
   title: "",
   author: "",
+  matricule-number: "",
   faculty: "",
   department: "",
   group: "",
@@ -17,77 +17,108 @@
 ) = {
   // Set the document's basic properties.
   set page(
-    margin: (left: 0mm, right: 0mm, top: 0mm, bottom: 0mm),
+    margin: (left: 10mm, right: 10mm, top: 10mm, bottom: 10mm),
     numbering: none,
     number-align: center,
   )
 
   // University of Münster Logo
   place(
-    top + right,
-    dx: -13mm,
+    top + center,
     dy: 10mm,
-    image("../assets/logo.svg", width: 164pt)
+    image("../../assets/logo.svg", width: 300pt),
   )
 
   // Title etc.
-  pad(
-    left: 57mm,
-    top: 66mm,
-    right: 18mm,
+
+  place(
+    center,
+    dy: 75mm,
     stack(
-      // Type
-      if is-thesis {
-        let thesis-title = translations.bachelor-thesis
-        if is-master-thesis {
-          thesis-title = translations.master-thesis
-        }
-        upper(text(thesis-title, size: 9pt, weight: "bold"))
-        v(2mm)
-      },
-      // Author
-      text(author, size: 15pt),
-      v(13mm),
       // Title
+      line(start: (0pt, 0pt), length: 450pt, stroke: 0.2mm),
+      v(5mm),
       par(
         leading: 9pt,
-        text(title, size: 31pt, weight: 500),
+        text(title, size: 25pt, weight: "bold"),
       ),
       v(5mm),
-      line(start: (0pt, 0pt), length: 30pt, stroke: 1mm),
-      v(12mm),
-      // Faculty
-      text(translations.faculty-of + " " + faculty, size: 12pt, weight: "bold"),
-      if department.len() > 0 {
-        v(3mm)
-        // Department
-        text(translations.department-of + " " + department, size: 10pt, )
+      line(start: (0pt, 0pt), length: 450pt, stroke: 0.2mm),
+      // Type
+      if is-thesis {
+        v(20mm)
+        let thesis-title
+        if is-bachelor-thesis {
+          thesis-title = translations.bachelor-thesis
+        } else if is-master-thesis {
+          thesis-title = translations.master-thesis
+        }
+        text(upper(thesis-title), size: 15pt)
       },
-      if group.len() > 0 {
-        v(2mm)
-        // Group
-        text(group + " " + translations.research-group, size: 10pt)
-      }
-    )
+      // Author
+      v(18mm),
+      text(translations.submitted-by, size: 12pt),
+      v(8mm),
+      text(author, size: 20pt, weight: "bold"),
+
+      v(30mm),
+
+      if is-thesis {
+        set text(size: 10pt)
+        place(
+          center + bottom,
+          //dy: -150pt,
+          box(
+            width: 300pt,
+            place(
+              top,
+              table(
+                columns: (1fr, 1fr),
+                stroke: none,
+                align: (right, left),
+
+                text(translations.course-of-study, weight: "bold"), study-course,
+                text(translations.matricule-number, weight: "bold"), matricule-number,
+                [*Submission Date*], submission-date.display("[day].[month].[year]"),
+              ),
+            ),
+          ),
+        )
+      },
+    ),
   )
 
   // University name text
   place(
     right + bottom,
-    dx: -13mm,
-    dy: -35mm,
+    dx: 10mm,
+    dy: -25mm,
     box(
+      width: 200pt,
       align(
         left,
         stack(
           line(start: (0pt, 0pt), length: 25pt, stroke: 0.9mm),
           v(3mm),
           text("UNIVERSITÄT MÜNSTER", size: 9pt, weight: "bold"),
-          v(2mm),
+          v(3mm),
           text("University of Münster", size: 9pt),
-        )
-      )
-    )
+          v(2mm),
+          // Faculty
+          text(translations.faculty-of + " " + faculty, size: 8pt),
+          if department.len() > 0 {
+            v(2mm)
+            // Department
+            text(translations.department-of + " " + department, size: 8pt)
+          },
+          if group.len() > 0 {
+            v(2mm)
+            // Group
+            text(group + " " + translations.research-group, size: 8pt)
+          },
+        ),
+      ),
+    ),
   )
 
   if (is-report) {
@@ -109,34 +140,33 @@
         // Supervision
         if supervisors.len() > 0 and type(supervisors) != array {
           text(
-            translations.supervising-examiner + ": " + text(upper(supervisors))
+            translations.supervising-examiner + ": " + text(upper(supervisors)),
           )
         } else if supervisors.len() > 0 {
           stack(
             text(
-              translations.supervising-examiner + ": " + text(supervisors.first())
+              translations.supervising-examiner + ": " + text(supervisors.first()),
             ),
             if supervisors.len() > 1 {
               v(10pt)
               text(
-                translations.second-examiner + ": " + text(supervisors.at(1))
+                translations.second-examiner + ": " + text(supervisors.at(1)),
               )
-            }
+            },
           )
         },
-      )
+      ),
     )
   }
-  
+
 
   if is-thesis {
-
     // University of Münster Claim
     place(
-    bottom + left,
-    dx: +13mm,
-    dy: -40mm,
-    image("../assets/claim.svg", width: 33mm)
+      bottom + left,
+      dx: +13mm,
+      dy: -40mm,
+      image("../../assets/claim.svg", width: 33mm),
     )
     // Second cover page
     pagebreak()
@@ -175,8 +205,7 @@
         spacing: 3mm,
         if is-bachelor-thesis {
           text(translations.bachelor-thesis-submitted-for-examination-in-bachelors-degree)
-        }
-        else if is-master-thesis {
+        } else if is-master-thesis {
           text(translations.master-thesis-submitted-for-examination-in-masters-degree)
         },
         text(translations.in-the-study-course + " " + text(study-course, style: "italic")),
@@ -202,7 +231,7 @@
           }
         }
       },
-    
+
       // Submission date
       if submission-date != none {
         stack(

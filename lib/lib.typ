@@ -1,13 +1,17 @@
+#import "pages/covers/covers.typ": covers
+
 #let report(
   language: "en",
   title: "",
   author: "",
+  matricule-number: "",
   faculty: "",
   department: "",
   group: "",
   supervisors: (),
   submission-date: none,
   include-declaration-of-independent-processing: false,
+  cover: "modern",
   body,
 ) = {
   import "template.typ": template
@@ -28,6 +32,7 @@
     abstract-en: none,
 
     author: author,
+    matricule-number: matricule-number,
     faculty: faculty,
     department: department,
     group: group,
@@ -35,6 +40,7 @@
     supervisors: supervisors,
     submission-date: submission-date,
     include-declaration-of-independent-processing: include-declaration-of-independent-processing,
+    cover: covers.at(cover),
     body,
   )
 }
@@ -51,6 +57,7 @@
   abstract-en: none,
 
   author: "",
+  matricule-number: "",
   faculty: "",
   department: "",
   group: "",
@@ -59,6 +66,7 @@
   submission-date: none,
   include-declaration-of-independent-processing: true,
   body,
+  cover: "modern",
 ) = {
   import "template.typ": template
   template(
@@ -78,6 +86,7 @@
     abstract-en: abstract-en,
 
     author: author,
+    matricule-number: matricule-number,
     faculty: faculty,
     department: department,
     group: group,
@@ -86,6 +95,7 @@
     submission-date: submission-date,
     include-declaration-of-independent-processing: include-declaration-of-independent-processing,
     body,
+    cover: covers.at(cover),
   )
 }
 
@@ -101,6 +111,7 @@
   abstract-en: none,
 
   author: "",
+  matricule-number: "",
   faculty: "",
   department: "",
   group: "",
@@ -109,6 +120,7 @@
   submission-date: none,
   include-declaration-of-independent-processing: true,
   body,
+  cover: "modern",
 ) = {
   import "template.typ": template
   template(
@@ -128,6 +140,7 @@
     abstract-en: abstract-en,
 
     author: author,
+    matricule-number: matricule-number,
     faculty: faculty,
     department: department,
     group: group,
@@ -136,5 +149,6 @@
     submission-date: submission-date,
     include-declaration-of-independent-processing: include-declaration-of-independent-processing,
     body,
+    cover: covers.at(cover),
   )
 }
