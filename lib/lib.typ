@@ -103,10 +103,12 @@
   language: "en",
 
   title-de: "",
+  subtitle-de: none,
   keywords-de: none,
   abstract-de: none,
 
   title-en: none,
+  subtitle-en: none,
   keywords-en: none,
   abstract-en: none,
 
@@ -132,10 +134,12 @@
     language: language,
 
     title-de: title-de,
+    subtitle-de : subtitle-de,
     keywords-de: keywords-de,
     abstract-de: abstract-de,
 
     title-en: title-en,
+    subtitle-en: subtitle-en,
     keywords-en: keywords-en,
     abstract-en: abstract-en,
 

@@ -7,10 +7,12 @@
   language: "en",
 
   title-de: "",
+  subtitle-de: "",
   keywords-de: none,
   abstract-de: none,
 
   title-en: none,
+  subtitle-en: none,
   keywords-en: none,
   abstract-en: none,
 
@@ -30,8 +32,10 @@
   let PAGE_MARGIN_TOP = 37mm
 
   let title = title-de
+  let subtitle = subtitle-de
   if language == "en" {
     title = title-en
+    subtitle = subtitle-en
   }
 
   // Set the document's basic properties.
@@ -42,6 +46,19 @@
     number-align: right,
     binding: left,
     header-ascent: 24pt,
+    footer: context {
+      set text(size: 11.5pt)
+      grid(
+        rows: 1,
+        gutter: 5pt,
+        if calc.even(here().page()) {
+          h(1fr)
+          counter(page).display()
+        } else {
+          counter(page).display()
+        },
+      )
+    },
     header: context {
       // Before
       let selector_before = selector(heading.where(level: 1)).before(here())
@@ -80,12 +97,20 @@
       }
 
       set text(size: 11.5pt)
+
       grid(
         rows: 2,
         gutter: 5pt,
-        if heading.numbering != none {
-          emph(str(level) + " " + heading.body)
-        } else {
+        
+        if heading.numbering != none{
+          
+          if calc.even(here().page()) {
+            emph(str(level) + " " + heading.body)
+          } else {
+            h(1fr)
+            emph(str(level) + " " + heading.body)
+          }
+        } else{
           emph(heading.body)
         },
         line(length: 100%, stroke: 0.7pt),
@@ -164,6 +189,7 @@
     is-report: is-report,
 
     title: title,
+    subtitle: subtitle,
     author: author,
     matricule-number: matricule-number,
     faculty: faculty,
@@ -216,8 +242,9 @@
 
   // Reset page numbering and set it to numbers
   set page(
-    numbering: "1",
+    numbering: "1"
   )
+  
   counter(page).update(1)
 
   // Main body.

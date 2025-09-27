@@ -10,16 +10,30 @@
 
   text(translations.declaration-of-independent-processing-content)
 
-  v(40pt)
+  v(60pt)
+
+
 
   grid(
-    columns: 3,
+    columns: 1,
     gutter: 10pt,
-    line(length: 85pt, stroke: 1pt),
-    line(length: 85pt, stroke: 1pt),
-    line(length: 150pt, stroke: 1pt),
-    align(center, text(translations.place, size: 9pt)),
-    align(center, text(translations.date, size: 9pt)),
-    align(center, text(translations.signature, size: 9pt)),
+    line(length: 200pt, stroke: 1pt),
+    align(center, text([Matthias Kuhn, Münster, #datetime.today().display("[day].[month].[year]")], size: 9pt)),
+  )
+
+  v(40pt)
+
+  text("I consent to having my thesis cross-checked with other texts to identify possible similarities and to having it stored in a database for this purpose. I confirm that I have not submitted the following theses in part or whole as an examination paper before.")
+
+  
+  v(60pt)
+
+
+
+  grid(
+    columns: 1,
+    gutter: 10pt,
+    line(length: 200pt, stroke: 1pt),
+    align(center, text([Matthias Kuhn, Münster, #datetime.today().display("[day].[month].[year]")], size: 9pt)),
   )
 }

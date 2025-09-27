@@ -99,12 +99,12 @@
   ),
 
   declaration-of-independent-processing: value(
-    en: "Declaration of Independent Processing",
+    en: "Declaration of Academic Integrity",
     de: "Erklärung zur selbstständigen Bearbeitung",
   ),
 
   declaration-of-independent-processing-content: value(
-    en: "I hereby certify that I wrote this work independently without any outside help and only used the resources specified. Passages taken literally or figuratively from other works are identified by citing the sources.",
+    en: "I hereby confirm that this thesis, entitled \"Learning the Complement of a Büchi Automaton: Variants and Their Empirical Comparison\" is solely my own work and that I have used no sources or aids other than the ones stated. All passages in my thesis for which other sources, including electronic media, have been used, be it direct quotes or content references, have been acknowledged as such and the sources cited. I am aware that plagiarism is considered an act of deception which can result in sanctions in accordance with the examination regulations.",
     de: "Hiermit versichere ich, dass ich die vorliegende Arbeit ohne fremde Hilfe selbständig verfasst und nur die angegebenen Hilfsmittel benutzt habe. Wörtlich oder dem Sinn
 nach aus anderen Werken entnommene Stellen sind unter Angabe der Quellen kenntlich gemacht.",
   ),

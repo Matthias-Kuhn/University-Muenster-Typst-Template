@@ -6,6 +6,7 @@
   is-bachelor-thesis: true,
   is-report: false,
   title: "",
+  subtitle: "",
   author: "",
   matricule-number: "",
   faculty: "",
@@ -53,7 +54,12 @@
         leading: 9pt,
         text(title, size: 31pt, weight: 500),
       ),
-      v(5mm),
+      v(8mm),
+      par(
+        leading: 9pt,
+        text(subtitle, size: 19pt, weight: 500),
+      ),
+      v(7mm),
       line(start: (0pt, 0pt), length: 30pt, stroke: 1mm),
       v(12mm),
       // Faculty
