@@ -222,6 +222,7 @@
   }
 
   // Table of contents.
+
   import "pages/outline.typ": outline_page
   outline_page()
 

@@ -145,6 +145,7 @@
     )
     // Second cover page
     pagebreak()
+    pagebreak()
 
     // Set the document's basic properties.
     set page(
@@ -152,6 +153,9 @@
       numbering: none,
       number-align: center,
     )
+
+   // remove number from second cover
+    set page(footer: none)
 
     // Title etc.
     stack(
@@ -168,6 +172,16 @@
           leading: 13pt,
           text(title, size: 18pt),
         ),
+        
+      ),
+      v(.6cm),
+      align(
+        center,
+        par(
+          leading: 13pt,
+          text(subtitle, size: 15pt),
+        ),
+        
       ),
       v(22mm),
     )

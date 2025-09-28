@@ -4,6 +4,8 @@
     numbering: "i",
   )
 
+  counter(page).update(1)
+
   set outline.entry(fill: grid(
     columns: 2,
     gutter: 0pt,
