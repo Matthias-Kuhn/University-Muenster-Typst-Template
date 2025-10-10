@@ -2,6 +2,7 @@
   language: "en",
   author: "",
   title: "",
+  subtitle: "asdf",
   keywords: (),
   abstract: "",
 ) = {
@@ -20,17 +21,18 @@
     spacing: 10mm,
     custom_title(author),
 
-    v(9mm),
+    v(10mm),
 
-    custom_title(if language == "en" {"Title of thesis"} else {"Thema der Arbeit"}),
-    v(6mm),
-    text(title),
+    align(center, stack(custom_title(title),
+    v(4mm),
+    custom_title(subtitle))),
+    
 
-    v(9mm),
+    v(10mm),
 
     custom_title(if language == "en" {"Keywords"} else {"Stichworte"}),
     v(6mm),
-    text(keywords.join(", ")),
+    text(keywords.join(", "),style: "italic"),
 
     v(9mm),
 

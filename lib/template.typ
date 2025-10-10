@@ -41,7 +41,7 @@
   // Set the document's basic properties.
   set document(author: author, title: title, date: submission-date)
   set page(
-    margin: (left: 31.5mm, right: 31.5mm, top: PAGE_MARGIN_TOP, bottom: 56mm),
+    margin: (left: 22.5mm, right: 22.5mm, top: PAGE_MARGIN_TOP, bottom: 30mm),
     numbering: "1",
     number-align: right,
     binding: left,
@@ -117,7 +117,7 @@
       )
     }
   )
-  set par(leading: 9pt)
+  set par(leading: 8pt)
   set text(font: "New Computer Modern", lang: language, size: 10.85pt)
   set heading(
     numbering: "1.1", 
@@ -200,25 +200,27 @@
     submission-date: submission-date,
   )
 
+  
   // Abstract
-  if abstract-de != none or abstract-en != none {
+  if abstract-en != none {
     import "pages/abstract.typ": abstract_page
     if (language == "en") {
       abstract_page(
         language: "en",
         author: author,
         title: title-en,
+        subtitle: subtitle-en,
         keywords: keywords-en,
         abstract: abstract-en,
       )
     }
-    abstract_page(
-      language: "de",
-      author: author,
-      title: title-de,
-      keywords: keywords-de,
-      abstract: abstract-de,
-    )
+    //abstract_page(
+    //  language: "de",
+    //  author: author,
+    //  title: title-de,
+    //  keywords: keywords-de,
+    //  abstract: abstract-de,
+    //)
   }
 
   // Table of contents.

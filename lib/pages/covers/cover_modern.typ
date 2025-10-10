@@ -81,7 +81,7 @@
   place(
     right + bottom,
     dx: -13mm,
-    dy: -35mm,
+    dy: -20mm,
     box(
       align(
         left,
@@ -140,7 +140,7 @@
     place(
       bottom + left,
       dx: +13mm,
-      dy: -40mm,
+      dy: -20mm,
       image("../../assets/claim.svg", width: 33mm),
     )
     // Second cover page
@@ -149,7 +149,7 @@
 
     // Set the document's basic properties.
     set page(
-      margin: (left: 31.5mm, right: 32mm, top: 55mm, bottom: 67mm),
+      margin: (left: 31.5mm, right: 32mm, top: 55mm, bottom: 35mm),
       numbering: none,
       number-align: center,
     )
@@ -187,7 +187,8 @@
     )
 
     v(1fr)
-
+    
+    
     stack(
       // Content
       stack(
