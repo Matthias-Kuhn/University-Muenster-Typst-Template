@@ -41,7 +41,7 @@
   // Set the document's basic properties.
   set document(author: author, title: title, date: submission-date)
   set page(
-    margin: (left: 22.5mm, right: 22.5mm, top: PAGE_MARGIN_TOP, bottom: 30mm),
+    margin: (inside: 30.5mm, outside: 22.5mm, top: PAGE_MARGIN_TOP, bottom: 30mm),
     numbering: "1",
     number-align: right,
     binding: left,
@@ -52,9 +52,10 @@
         rows: 1,
         gutter: 5pt,
         if calc.even(here().page()) {
-          h(1fr)
+         
           counter(page).display()
         } else {
+           h(1fr)
           counter(page).display()
         },
       )
@@ -117,7 +118,7 @@
       )
     }
   )
-  set par(leading: 8pt)
+  set par(leading: .6em )
   set text(font: "New Computer Modern", lang: language, size: 10.85pt)
   set heading(
     numbering: "1.1", 
