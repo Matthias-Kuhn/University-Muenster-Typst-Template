@@ -8,6 +8,7 @@
   title: "",
   subtitle: "",
   author: "",
+  mail: "",
   matricule-number: "",
   faculty: "",
   department: "",
@@ -164,6 +165,16 @@
         center,
         text(author, size: 14pt),
       ),
+      v(5mm),
+      align(
+        center,
+        text(mail, size: 11pt),
+      ),
+      v(3mm),
+      align(
+        center,
+        text("Matriculation number: "+ matricule-number, size: 10pt),
+      ),
       v(23mm),
       // Title
       align(
@@ -205,6 +216,7 @@
       ),
 
       v(4mm),
+
       line(start: (0pt, 0pt), length: 25pt, stroke: 1mm),
       v(4mm),
 

@@ -17,6 +17,7 @@
   abstract-en: none,
 
   author: "",
+  mail: "",
   matricule-number: "",
   faculty: "",
   department: "",
@@ -192,6 +193,7 @@
     title: title,
     subtitle: subtitle,
     author: author,
+    mail: mail,
     matricule-number: matricule-number,
     faculty: faculty,
     department: department,

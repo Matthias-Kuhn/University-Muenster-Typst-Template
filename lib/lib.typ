@@ -113,6 +113,7 @@
   abstract-en: none,
 
   author: "",
+  mail: "",
   matricule-number: "",
   faculty: "",
   department: "",
@@ -144,6 +145,7 @@
     abstract-en: abstract-en,
 
     author: author,
+    mail: mail,
     matricule-number: matricule-number,
     faculty: faculty,
     department: department,
