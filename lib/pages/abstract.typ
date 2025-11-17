@@ -9,6 +9,7 @@
   // TODO Needed, because context creates empty pages with wrong numbering
   set page(
     numbering: "i",
+    footer: none,
   )
 
   let custom_title(title) = {

@@ -203,7 +203,6 @@
     submission-date: submission-date,
   )
 
-  
   // Abstract
   if abstract-en != none {
     import "pages/abstract.typ": abstract_page
@@ -224,6 +223,10 @@
     //  keywords: keywords-de,
     //  abstract: abstract-de,
     //)
+    // 
+    pagebreak()
+    set page(footer: none)
+    pagebreak()
   }
 
   // Table of contents.

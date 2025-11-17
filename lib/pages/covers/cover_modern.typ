@@ -140,7 +140,7 @@
     // University of Münster Claim
     place(
       bottom + left,
-      dx: +13mm,
+      dx: +22mm,
       dy: -20mm,
       image("../../assets/claim.svg", width: 33mm),
     )
@@ -247,5 +247,9 @@
         )
       },
     )
+    pagebreak()
+    pagebreak()
+   
   }
+  
 }
