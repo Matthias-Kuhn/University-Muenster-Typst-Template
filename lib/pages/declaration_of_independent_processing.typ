@@ -23,7 +23,7 @@
 
   v(40pt)
 
-  text("I consent to having my thesis cross-checked with other texts to identify possible similarities and to having it stored in a database for this purpose. I confirm that I have not submitted the following theses in part or whole as an examination paper before.")
+  text("I consent to having my thesis cross-checked with other texts to identify possible similarities and to having it stored in a database for this purpose. I confirm that I have not submitted the following thesis in part or whole as an examination paper before.")
 
   
   v(60pt)
